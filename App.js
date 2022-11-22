@@ -18,7 +18,7 @@ export default function App() {
           options={{
             title: "Salvos",
             headerStyle: {
-              backgroundColor: "#123123",
+              backgroundColor: "#8155BA",
             },
             headerTitleAlign: "left",
             headerTintColor: "white",

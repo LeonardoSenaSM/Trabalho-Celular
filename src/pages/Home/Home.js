@@ -69,19 +69,20 @@ export default function Home({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => registerToDB()}>
-        <Text>butão</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("Front")}>
-        <Text>filmes salvos</Text>
-      </TouchableOpacity>
-      <Text style={styles.input}>Procure o filme?</Text>
+      <Text style={styles.backs}>Procurar o filme!</Text>
       <TextInput
         style={styles.input}
+        placeholderTextColor="black"
         placeholder="Filme"
         onChangeText={(movie) => setValue(movie)}
         // onBlur={() => console.log('Acho!',temp(value))}
       ></TextInput>
+      <TouchableOpacity onPress={() => registerToDB()} style={styles.btn}>
+        <Text style={styles.txt}>Salvar</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Front")} style={styles.btt}>
+        <Text style={styles.txt}>filmes salvos</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -94,18 +95,44 @@ const styles = StyleSheet.create({
     backgroundColor: "#ebebeb",
   },
   txt: {
-    color: "#000000",
+    color: "#FFF",
     textAlign: "center",
     marginTop: 5 + "%",
   },
   btt: {
     borderRadius: 10,
     width: 45 + "%",
-    height: 5 + "%",
-    backgroundColor: "#000000",
+    height: 7 + "%",
+    backgroundColor: "#7b68ee",
     marginTop: 5 + "%",
+    textAlign:"center",
+  },
+  btn: {
+    borderRadius: 10,
+    width: 45 + "%",
+    height: 7 + "%",
+    backgroundColor: "#ec2300",
+    marginTop: 30 + "%",
+    textAlign: "center",
   },
   input: {
-    color: "#000000",
+    borderRadius: 20,
+    width: 50 +"%",
+    height: 5 +"%",
+    padding: 2 + "%",
+    backgroundColor: "#c0c2c9",
+    marginTop: 4 + "%",
+    textAlign: "center",
   },
-});
+    backs: {
+      borderRadius: 10,
+      backgroundColor: "#5a4fcf",
+      width: 45 + "%",
+      height: 4 + "%",
+      textAlign: "center",
+      marginTop: 20,
+
+  }
+}
+);
+
